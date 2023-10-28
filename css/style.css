@@ -21,7 +21,6 @@ html,body{
     height: auto; 
     max-width: 100%;
   }
-  
 body {
     background: url(../asset/底图蒙版.png);
     background-repeat: no-repeat;
