@@ -47,7 +47,7 @@
         .scan{
     width: 100%;
     margin-bottom: -25%;
-    
+    margin-top: -25%;
 }
 
 .scantext{
@@ -66,7 +66,7 @@
 
 <body>
     <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
-    <div class="enter"><img src="assest/enter.png" alt=""  class="entry" style="visibility:hidden"></div>
+    <div class="enter"><img src="assest/enter.png" alt=""  class="entry" style="visibility:hidden" data-indexNumber="0"></div>
     <button onclick="useCamera()">使用相机扫一扫方式</button>
 
     <p style="text-align: center;"><img src="assest/scan.png" onclick="useCamera()" class="scan"><img src="assest/hint.png" alt="" class="hint"></p>
@@ -187,27 +187,27 @@
             if(decodedText== "1号拼图")
             {
                 entry.style.visibility = "visible"
+                entry.dataset.indexNumber = "1"
             }
 
         }
-
+       
 
         entry.onclick = function(){
-            window.location.href = '1a.html';
-            // var i =  one.dataset.indexNumber;
-            // var ran = Math.round(Math.random());
-            // if(ran ==1 ){
-            //     //location.reload();
-            //     window.location.href = i+'a'+'.html';
-            //     //this.style.display = 'none';
-            // }
-            // else{
-            //     //location.reload();
-            //     window.location.href = i+'b'+'.html';
-            //     //this.style.display = 'none';
-            // }
+            var i =  entry.dataset.indexNumber;
+            var ran = Math.round(Math.random());
+             if(ran ==1 ){
+                 location.reload();
+                 window.location.href = i+'a'+'.html';
+                 this.style.visibility = 'hidden';
+             }
+             else{
+                 location.reload();
+                 window.location.href = i+'b'+'.html';
+                 this.style.visibility = 'hidden';
+             }
         }
-        扫码解析失败后按照自己的需求做后续的操作
+        //扫码解析失败后按照自己的需求做后续的操作
         function onScanFailure(error) {
             res.innerText = "扫码失败:\n" + error;
         }
