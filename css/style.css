@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Noto+Serif:wght@400;500;700&display=swap");*,:after,:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
+}
+
+
+html,body{
+    width:100%;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
+    height: auto; 
+    max-width: 100%;
+  }
+  
+body {
+    background: url(../asset/底图蒙版.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    position: "fixed"
+  }
+
+button {
+    display: block;
+    width: 80%;
+    margin: 5% auto;
+    outline: none;
+   
+
+    color: #fff;
+    background-color: #f0cc6b;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#upload-input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#upload-text {
+    position: relative;
+    bottom: 40px;
+    user-select: none;
+}
+.divSquare{
+    width: 45%;
+    height: 5EM;
+    margin: 2%;
+    border: 1px solid white;
+    float: left;
+    MARGIN-TOP: 10%;
+}
+.red{
+    background-color:  #f0cc6b;
+}
+.yellow{
+    background-color: #fae2a2;
+}
+
+.blue{
+    background-color: #e5e17d;
+}
+.green{
+    background-color: #d3c49a;
+}
+
+.logo {
+    text-align: center;
+    margin-top: -5%;
+}
+.logo img{
+    height: auto;
+    width: 100%;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20%;
+}
+.text img{
+    height: 40px;
+    width: auto;
+}
+
+.arrow {
+    text-align: center;
+}
+.arrow img{
+    height: 40px;
+    width: auto;
+}
+
+.letter {
+    text-align: center;
+    margin-top: -10%;
+}
+.letter img{
+    height:300px;
+    width: auto;
+}
+
+
+
+
+.picture{
+    text-align: center;
+}
+
+.picture img{
+    height: auto;
+    width: 100%;
+    margin-top: -10%;
+}
+
+.pizzle{
+    background-size: cover;
+    background-image: url(../asset/拼图底图.png);
+}
+
+
+.circle-button {
+    width: 10rem;
+    height: 10rem;
+    background-color: #f0cc6b;
+    border-radius: 50%; /* 使按钮变成圆形 */
+    animation: pulse 0.8s infinite alternate; /* 使用关键帧动画 */
+    margin: 10% auto;
+    line-height: 10rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* 初始大小 */
+    }
+    100% {
+        transform: scale(1.1); /* 变大到1.2倍大小 */
+    }
+}
+
+.scan{
+    width: 100%;
+    margin-bottom: -25%;
+    margin-top: -25%;
+}
+
+.scantext{
+    text-align: center;
+    color: #fff;
+    margin-top: 2.5%;
+    font-size: 30px;
+}
+.hint{
+    width: 70%;
+    
+}
+
+.enter{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.enter img{
+    width: 53%;
+}
+
+.get{
+    margin: 0 auto; width: 80%; visibility: hidden;
+}
+
+.pic{
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}
+
+.one, .two, .three, .four{
+    display: block;
+}

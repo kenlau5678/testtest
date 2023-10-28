@@ -7,6 +7,14 @@
     <title>scan</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
     <style>
+        body {
+    background: url(assest/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+  }
         button {
             display: block;
             width: 100%;
@@ -35,16 +43,35 @@
             bottom: 40px;
             user-select: none;
         }
+
+        .scan{
+    width: 100%;
+    margin-bottom: -25%;
+    margin-top: -25%;
+}
+
+.scantext{
+    text-align: center;
+    color: #fff;
+    margin-top: 2.5%;
+    font-size: 30px;
+}
+.hint{
+    width: 70%;
+    
+}
+        
     </style>
 </head>
 
 <body>
     <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
+    <div class="enter"><img src="assest/enter.png" alt=""  class="entry" style="visibility:hidden"></div>
     <button onclick="useCamera()">使用相机扫一扫方式</button>
 
-    <img src="assest/scan.png" alt="" onclick="useCamera()">
+    <p style="text-align: center;"><img src="assest/scan.png" onclick="useCamera()" class="scan"><img src="assest/hint.png" alt="" class="hint"></p>
 
-    <div class="enter"><img src="assest/enter.png" alt=""  class="entry" style="visibility:hidden"></div>
+   
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
 

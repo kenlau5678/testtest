@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
+}
+html,body{
+    overflow: hidden;
+    height: 100%;
+    font-family: "Noto Serif","Noto Serif TC",source-han-serif-tc;
+  }
+.content{
+    display: none;
+    width: 300px; height: 400px;
+    position: absolute; left: 50%; top: 50%;
+    margin-top: -200px;    /* 高度的一半 */
+    margin-left: -150px;    /* 宽度的一半 */
+    background-image: url("../asset/信纸.png");
+    background-size: cover;
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: 0;
+   }
+
+.three{
+    text-align: center;
+    margin-top: 10%;
+}
+.three img{
+    height: 40px;
+    width: auto;
+}
+
+.button{
+    width:30px; 
+    height:30px; 
+    margin:4px; 
+    border:1px solid black; 
+    float: left
+}
+
+.buttons{
+    text-align: center;
+}
+.buttons button{
+    display:inline-block; 
+    width: 100px; 
+    height:100px; 
+    margin:5px;
+
+}
+
+.content .question{
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.question p{
+    display: inline-block;
+    
+
+    vertical-align: middle;
+
+    
+    margin-top: 15%;
+    margin-bottom: 13%;
+}
+
+.content .answer{
+    width: 240px; 
+    height:100px; 
+    background-color:  #f0cc6b;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 5%;
+    margin-top: 15%;
+    
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; /* 水平居中 */ 
+    align-items: center;
+}
+
+.content .continue{
+    width: 300px;
+    height: 50px;
+    float: right;
+    position:relative;
+    right: 5%;
+    text-align: right;
+}
+
+.continue p{
+    display:inline-block; 
+} 
+
+.content img{
+    height:20px;
+    width: auto;
+}
+
+.content .fin{
+    text-align: center;
+}
+
+.fin img{
+    height: 40px;
+    width: auto;
+}
+.back img{
+    height: 220px;
+    width: auto;
+}
+
+.content .end{
+    width: 300px;
+    height: 50px;
+    
+    position:relative;
+    top: 20%;
+
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列 */
+    grid-template-rows: repeat(2, 1fr);    /* 两行 */
+    width: 230px; /* 设置容器宽度 */
+    margin: 0 auto;
+}
+
+.button-container button {
+        text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
