@@ -132,9 +132,9 @@ let html5QrCode = new Html5Qrcode("reader");
                         else
                         {
                             if (devices.length == 1) {
-                                cameraId = devices[0].id; //前置摄像头
+                                cameraId = devices[1].id; //前置摄像头
                             } else {
-                                cameraId = devices[1].id;  //后置摄像头
+                                cameraId = devices[0].id;  //后置摄像头
                             }
                         }
 
