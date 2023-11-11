@@ -42,6 +42,7 @@
     <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
     <button onclick="useCamera()">扫一扫1</button>
     <button onclick="useCamera2()">扫一扫2</button>
+    <button onclick="useCamera2()">扫一扫3</button>
     <button onclick="useLocal()">
         <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
         <span id="upload-text">使用文件方式</span>
@@ -49,26 +50,7 @@
     <div id="reader"></div>
     <h3 id="qr-reader-results"></h3>
     <script>
-        //方式一使用库的ui
-        // var resultContainer = document.getElementById('qr-reader-results');
-        // var lastResult, countResults = 0;
-
-        // function onScanSuccess(decodedText, decodedResult) {
-        //     if (decodedText !== lastResult) {
-        //         ++countResults;
-        //         lastResult = decodedText;
-        //         document.getElementById('qr-reader-results').innerText = lastResult;
-        //         // Handle on success condition with the decoded message.
-        //         console.log(`Scan result ${decodedText}`, decodedResult);
-        //     }
-        // }
-
-        // var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 300 });
-        // html5QrcodeScanner.render(onScanSuccess);
-        // var resultContainer = document.getElementById('qr-reader-results');
-        // var lastResult, countResults = 0;
-
-
+       
         //1.Html5QrcodeScanner是js提供的ui; 2.Html5Qrcode是自定义面板
         let html5QrCode = new Html5Qrcode("reader"); 
         let reader = document.getElementById("reader");
@@ -140,6 +122,18 @@
                     console.log("没有获取摄像头设备...");
                 });
         }
+
+        function useCamera3() {
+            reader.style.display = "block";
+            res.innerText = "";
+            Html5Qrcode.getCameras()
+                .then((devices) => {
+                        startWithoutCameraId2();
+                })
+                .catch((err) => {
+                    console.log("没有获取摄像头设备...");
+                });
+        }
         //带相机ID扫描
         function startWithCameraId(cameraId) {
             html5QrCode
@@ -160,6 +154,18 @@
             html5QrCode.start(
                 { facingMode: "user" } || {
                     facingMode: { exact: "user" },
+                },
+                config,
+                onScanSuccess,
+                onScanFailure
+            );
+        }
+
+        function startWithoutCameraId2() {
+            //environment 表示后置摄像头  换成user则表示前置摄像头
+            html5QrCode.start(
+                { facingMode: "environment" } || {
+                    facingMode: { exact: "environment" },
                 },
                 config,
                 onScanSuccess,
