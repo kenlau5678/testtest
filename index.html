@@ -126,8 +126,9 @@ let html5QrCode = new Html5Qrcode("reader");
                                 cameraId = devices[2].id; //前置摄像头
                             } else 
                             {
-                                cameraId = devices[2].id;  //后置摄像头
+                                cameraId = devices[1].id;  //后置摄像头
                             }
+                            alert(cameraId)
                         }
                         else
                         {
