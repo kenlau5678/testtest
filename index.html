@@ -158,8 +158,8 @@
         function startWithoutCameraId() {
             //environment 表示后置摄像头  换成user则表示前置摄像头
             html5QrCode.start(
-                { facingMode: "environment" } || {
-                    facingMode: { exact: "environment" },
+                { facingMode: "user" } || {
+                    facingMode: { exact: "user" },
                 },
                 config,
                 onScanSuccess,
