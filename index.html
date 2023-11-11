@@ -123,10 +123,10 @@ let html5QrCode = new Html5Qrcode("reader");
                             alert("三星手机")
                             if (devices.length == 1) 
                             {
-                                cameraId = devices[2].id; //前置摄像头
+                                cameraId = devices[1].id; //前置摄像头
                             } else 
                             {
-                                cameraId = devices[1].id;  //后置摄像头
+                                cameraId = devices[2].id;  //后置摄像头
                             }
                             alert(cameraId)
                         }
