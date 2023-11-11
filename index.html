@@ -117,13 +117,10 @@ let html5QrCode = new Html5Qrcode("reader");
                 .then((devices) => {
                     if (devices && devices.length) {
                         let cameraId = "";
-
-
                         var userAgent = navigator.userAgent;
-                        alert(devices[0].id)
-                        alert(devices[1].id)
                         if(userAgent.match(/samsung/i))
                         {
+                            alert("三星手机")
                             if (devices.length == 1) 
                             {
                                 cameraId = devices[1].id; //前置摄像头
