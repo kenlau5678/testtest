@@ -42,7 +42,7 @@
     <!-- 相机、文件方式同时只能使用一个,可根据自己需求修改,如:1.改成下拉框;2.改成tab;3.改成radio等等控制显示隐藏和相应逻辑 -->
     <button onclick="useCamera()">扫一扫1</button>
     <button onclick="useCamera2()">扫一扫2</button>
-    <button onclick="useCamera3()">扫一扫3</button>
+    <button onclick="useCamera2()">扫一扫3</button>
     <button onclick="useLocal()">
         <input type="file" id="upload-input" accept="image/*" value="使用文件方式">
         <span id="upload-text">使用文件方式</span>
@@ -164,7 +164,7 @@
         function startWithoutCameraId2() {
             //environment 表示后置摄像头  换成user则表示前置摄像头
             html5QrCode.start(
-                { facingMode: "environment" } || {
+              { facingMode: "environment" } || {
                     facingMode: { exact: "environment" },
                 },
                 config,
